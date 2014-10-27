@@ -111,7 +111,7 @@ body {
     font: 11pt/1.7'Open Sans', Verdana, Arial, sans-serif
 }
 a {
-    color: #be1622
+    color: #006699
 }
 a:hover {
     color: #e30010
@@ -133,7 +133,7 @@ h1:before {
 h2 {
     font-size: 1.5em;
     margin: 1.5em 0 .2em -1px;
-    color: #be1622
+    color: #006699
 }
 h1 + h2 {
     margin-top: .5em
@@ -156,15 +156,16 @@ main ul li {
 }
 main ul li:before {
     content: "■ ";
-    color: #be1622;
+    color: #006699;
     position: absolute;
     font-size: .9em;
     margin: -1px -16px
 }
 nav {
     background-color: rgba(0, 0, 0, 0.04);
-    border-radius: 10px 5px 5px 10px;
-    margin: 10px 0 30px
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    margin: 10px 0 30px;
 }
 nav * {
     display: inline-block
@@ -174,9 +175,9 @@ nav a {
 }
 nav p {
     font-weight: 700;
-    border-radius: 10px 3px 3px 10px;
+    border-radius: 10px 10px 10px 10px;
     padding: 5px 15px 5px 10px;
-    background-color: #be1622
+    background-color: #006699
 }
 nav p a {
     color: white !important
@@ -194,7 +195,7 @@ nav ul li.active {
     letter-spacing: 0
 }
 nav ul li:hover {
-    background-color: #be1622;
+    background-color: #006699;
     transition: all .2s
 }
 nav ul li:hover a {
@@ -257,7 +258,7 @@ body.home img.aside {
 }
 #billboard .slogan {
     line-height: 1.4;
-    color: #be1622;
+    color: #006699;
     font-size: 2em;
     font-weight: 700;
     margin: 0 0 3em
