@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- ©2014 Ruben Verborgh - Multimedia Lab / iMinds / Ghent University -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Linked Data Fragments client</title>
+<style>html,textarea,button{font:11pt/1.4 'Open Sans',Verdana,Arial,sans-serif;outline:0}html{background:#f6f6f6}body{max-width:650px;margin:0 auto;padding:1em 3em;background:white;box-shadow:2px 2px 15px 0 rgba(50,50,50,0.75)}a,button,button:hover,label{color:#be1622;cursor:pointer;font-weight:bold;text-decoration:none}a:hover{color:#be1622;text-decoration:underline}header a{color:inherit}button{font-weight:bold;color:black;background-color:#f6f6f6;border-radius:3px;padding:5px 8px;margin-left:-1px;border:1px solid #999;cursor:pointer}label:after{content:":"}header h1{margin:.6em 0 0}header p{font-weight:bold;margin:0 0 2em}header .logo{float:right}header img{width:160px;border:0}fieldset{border:0;padding:0}ul{list-style:none;padding:0;margin:0}li{margin:.5em 0}select{min-width:390px;float:right}textarea{width:100%;min-height:11em;border:0;cursor:pointer;margin:0 0 1em;font-size:.95em}textarea:hover{color:#be1622}pre{width:100%;max-width:640px;height:25em;font-size:9pt;overflow:scroll;margin:.5em 0 1em}pre a{font-weight:normal}.log{color:#666;height:6.5em}footer{font-size:.8em;margin-top:2em}@media(max-width:725px){body{padding:1em;font-size:10pt}h1{font-size:1.4em}.logo{margin:-1em -.5em 0 0}select{float:none;display:block;min-width:0;max-width:90%}}@media(max-width:500px){.logo{display:none}}</style>
+  <link rel=stylesheet href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+  <header>
+    <a class="logo" href="http://linkeddatafragments.org/">
+      <img src="http://linkeddatafragments.org/images/logo.svg" alt="" />
+    </a>
+    <h1><a href="/">Linked Data Fragments client</a></h1>
+    <p class="abstract">
+      Enter or choose a SPARQL query below
+      and see then how your browser solves it using only
+      <a href="http://linkeddatafragments.org/concept/" target="_blank"><em>triple pattern fragments</em></a>.
+    </p>
+  </header>
+  <!--[if lte IE 9]><b>Your browser is unsupported.</b><div style="display:none"><![endif]-->
+  <main>
+    <fieldset class="ldf-client">
+      <ul>
+        <li>
+          <label>Choose a data source</label>
+          <select class="startFragments"></select>
+        </li>
+
+        <li>
+          <label>Type a SPARQL query</label>
+          <textarea class="query"></textarea>
+        </li>
+
+        <li>
+          <label>…or pick an example query</label>
+          <select class="queries"></select>
+        </li>
+
+        <li>
+          <button class="execute">Execute query</button>
+          <button class="stop" style="display:none">Stop execution</button>
+        </li>
+
+        <li>
+          <label>Query results</label>
+          <pre class="results"></pre>
+        </li>
+
+        <li>
+          <label>Execution log</label>
+          <pre class="log"></pre>
+        </li>
+      </ul>
+    </fieldset>
+
+    <p>
+      Discover how <a href="http://linkeddatafragments.org" target="_blank">Linked Data Fragments</a>
+      enable Web-scale querying of Linked Data.
+    </p>
+  </main>
+
+  <footer>
+    <p>
+      ©2013–2014
+      <a href="http://multimedialab.elis.ugent.be/" target="_blank">Multimedia Lab</a>,
+      <a href="http://www.ugent.be/" target="_blank">Ghent University</a> –
+      <a href="http://www.iminds.be/" target="_blank">iMinds</a>, Belgium.
+      <a href="https://github.com/LinkedDataFragments/WebClient">Source code</a>.
+    </p>
+  </footer>
+<script src="scripts/ldf-query-ui.js"></script></body>
+</html>
