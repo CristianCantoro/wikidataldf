@@ -1,1 +1,47 @@
-{"startFragments":{"http://data.wikidataldf.com/wikidata":{"name":"Wikidata combined RDF dump","url":"http://data.wikidataldf.com/wikidata","querySet":"wikidata"},"http://data.wikidataldf.com/wikidata-sitelinks":{"name":"Wikidata sitelinks RDF dump","url":"http://data.wikidataldf.com/wikidata-sitelinks","querySet":"wikidata-sitelinks"},"http://data.wikidataldf.com/wikidata-properties":{"name":"Wikidata properties RDF dump","url":"http://data.wikidataldf.com/wikidata-properties","querySet":"wikidata-properties"},"http://data.wikidataldf.com/wikidata-statements":{"name":"Wikidata statements RDF dump","url":"http://data.wikidataldf.com/wikidata-statements","querySet":"wikidata-properties"},"http://data.wikidataldf.com/wikidata-terms":{"name":"Wikidata terms RDF dump","url":"http://data.wikidataldf.com/wikidata-terms","querySet":"wikidata-terms"}},"querySets":{"wikidata":[],"wikidata-properties":[],"wikidata-sitelinks":[{"name":"articles both in Akan and Abkhaz Wikipedia","priority":1000,"sparql":"SELECT ?a ?b ?i WHERE {\n    ?a <http://schema.org/about> ?i.\n    ?a <http://schema.org/inLanguage> \"ak\".\n    ?a rdf:type <http://www.wikidata.org/ontology#Article>.\n    ?b <http://schema.org/about> ?i.\n    ?b <http://schema.org/inLanguage> \"ab\".\n    ?b rdf:type <http://www.wikidata.org/ontology#Article>.\n    FILTER(regex(?a, \"http://ak.wikipedia.org/wiki/\"))\n    FILTER(regex(?b, \"http://ab.wikipedia.org/wiki/\"))\n}"},{"name":"articles in the projects in Akan language","priority":1000,"sparql":"SELECT ?a ?i WHERE {\n    ?a <http://schema.org/about> ?i.\n    ?a <http://schema.org/inLanguage> \"ak\".\n    ?a rdf:type <http://www.wikidata.org/ontology#Article>.\n}"}],"wikidata-statements":[],"wikidata-terms":[]}}
+{
+  "startFragments": {
+    "http://data.wikidataldf.wmflabs.org/wikidata": {
+      "name": "Wikidata combined RDF dump",
+      "url": "http://data.wikidataldf.wmflabs.org/wikidata",
+      "querySet": "wikidata"
+    },
+    "http://data.wikidataldf.wmflabs.org/wikidata-sitelinks": {
+      "name": "Wikidata sitelinks RDF dump",
+      "url": "http://data.wikidataldf.wmflabs.org/wikidata-sitelinks",
+      "querySet": "wikidata-sitelinks"
+    },
+    "http://data.wikidataldf.wmflabs.org/wikidata-properties": {
+      "name": "Wikidata properties RDF dump",
+      "url": "http://data.wikidataldf.wmflabs.org/wikidata-properties",
+      "querySet": "wikidata-properties"
+    },
+    "http://data.wikidataldf.wmflabs.org/wikidata-statements": {
+      "name": "Wikidata statements RDF dump",
+      "url": "http://data.wikidataldf.wmflabs.org/wikidata-statements",
+      "querySet": "wikidata-properties"
+    },
+    "http://data.wikidataldf.wmflabs.org/wikidata-terms": {
+      "name": "Wikidata terms RDF dump",
+      "url": "http://data.wikidataldf.wmflabs.org/wikidata-terms",
+      "querySet": "wikidata-terms"
+    }
+  },
+  "querySets": {
+    "wikidata": [],
+    "wikidata-properties": [],
+    "wikidata-sitelinks": [
+      {
+        "name": "articles both in Akan and Abkhaz Wikipedia",
+        "priority": 1000,
+        "sparql": "SELECT ?a ?b ?i WHERE {\n    ?a <http://schema.org/about> ?i.\n    ?a <http://schema.org/inLanguage> \"ak\".\n    ?a rdf:type <http://www.wikidata.org/ontology#Article>.\n    ?b <http://schema.org/about> ?i.\n    ?b <http://schema.org/inLanguage> \"ab\".\n    ?b rdf:type <http://www.wikidata.org/ontology#Article>.\n    FILTER(regex(?a, \"http://ak.wikipedia.org/wiki/\"))\n    FILTER(regex(?b, \"http://ab.wikipedia.org/wiki/\"))\n}"
+      },
+      {
+        "name": "articles in the projects in Akan language",
+        "priority": 1000,
+        "sparql": "SELECT ?a ?i WHERE {\n    ?a <http://schema.org/about> ?i.\n    ?a <http://schema.org/inLanguage> \"ak\".\n    ?a rdf:type <http://www.wikidata.org/ontology#Article>.\n}"
+      }
+    ],
+    "wikidata-statements": [],
+    "wikidata-terms": []
+  }
+}
